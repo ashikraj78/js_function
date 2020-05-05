@@ -5,19 +5,21 @@
 1. What is the output or error of the code below.
 
 ```js
-function add(var a = 0,var b = 0){
-  return a + b;
-}
-add(21, 23);
+function add(a = 0, b = 0){
+   return a + b;
+ }
+ let result = add(21,23);
+ console.log(result); // 44
 ```
 
 2. What is the output or error of the code below.
 
 ```js
-function add(a = 0; b = 0) {
+function add(a = 0, b = 0) {
   return a + b;
 }
-add(21, 23);
+let result = add(21,23);
+ console.log(result); // 44
 ```
 
 3. What is the output or error of the code below.
@@ -26,7 +28,7 @@ add(21, 23);
 function add(a = 0, b = 0) {
   return a + b;
 }
-add(21, 23);
+add(21, 23); // 44
 ```
 
 4. What is the output or error of the code below.
@@ -35,7 +37,7 @@ add(21, 23);
 function add(a = 0, b) {
   return a + b;
 }
-add(21);
+add(21); // Nan
 ```
 
 5. What is the output or error of the code below.
@@ -44,33 +46,33 @@ add(21);
 function add(a = 0, b = 0) {
   return a + b;
 }
-add(undefined, 21);
+add(undefined, 21);//21
 ```
 
 6. What is the output or error of the code below.
 
 ```js
 function knowWhy(value) {
-  return if(value === 21){
-    return "Yes"
+  if(value === 21){ // no  return
+    return "Yes"; //semicolon must
   } else {
-    return "No"
+    return "No"; //semicolon must
   }
 }
-knowWhy(211);
+knowWhy(211); // "No"
 ```
 
 7. What is the output or error of the code below.
 
 ```js
 function knowWhy(value) {
-  return if(value === 21){
-    return "Yes"
+  if(value === 21){   // no return with if statement
+    return "Yes"; // semicolon must
   } else {
-    return "No"
+    return "No"; // semicolon must
   }
 }
-knowWhy(21);
+knowWhy(21); // "Yes"
 ```
 
 8. What is the output or error of the code below.
@@ -79,5 +81,7 @@ knowWhy(21);
 function isItIf(ifElse) {
   return ifElse;
 }
-isItIf(if(true){console.log('Testing')});
+isItIf(if(true)){ // if statement can't come , value is neede.
+  console.log('Testing');
+  }
 ```
